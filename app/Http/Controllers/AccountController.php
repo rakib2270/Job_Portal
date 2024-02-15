@@ -200,6 +200,7 @@ class AccountController extends Controller
             'jobType' => 'required',
             'vacancy' => 'required|integer',
             'location' => 'required|max:50',
+            'application_deadline' => 'required',
             'description' => 'required',
             'company_name' => 'required|min:3|max:75',          
 
@@ -217,6 +218,7 @@ class AccountController extends Controller
             $job->vacancy = $request->vacancy;
             $job->salary = $request->salary;
             $job->location = $request->location;
+            $job->application_deadline = $request->application_deadline;
             $job->description = $request->description;
             $job->benefits = $request->benefits;
             $job->responsibility = $request->responsibility;
@@ -281,6 +283,7 @@ class AccountController extends Controller
             'jobType' => 'required',
             'vacancy' => 'required|integer',
             'location' => 'required|max:50',
+            'application_deadline' => 'required',
             'description' => 'required',
             'company_name' => 'required|min:3|max:75',          
 
@@ -298,6 +301,7 @@ class AccountController extends Controller
             $job->vacancy = $request->vacancy;
             $job->salary = $request->salary;
             $job->location = $request->location;
+            $job->application_deadline = $request->application_deadline;            
             $job->description = $request->description;
             $job->benefits = $request->benefits;
             $job->responsibility = $request->responsibility;

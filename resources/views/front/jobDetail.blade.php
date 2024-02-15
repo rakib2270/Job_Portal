@@ -57,6 +57,7 @@
                             <h4>Responsibility</h4>
                             {!! nl2br($job->responsibility) !!}
                         </div>
+
                         @endif
                         @if (!empty($job->qualifications))
                         <div class="single_wrap">

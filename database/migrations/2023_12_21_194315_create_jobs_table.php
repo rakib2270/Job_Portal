@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('vacancy');
             $table->string('salary')->nullable();
             $table->string('location');
+            $table->date('application_deadline');
             $table->text('description')->nullable();
             $table->text('benefits')->nullable();
             $table->text('responsibility')->nullable();

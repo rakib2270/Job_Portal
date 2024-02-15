@@ -75,6 +75,11 @@
                                     <input type="text" placeholder="Location" id="location" name="location" class="form-control">
                                     <p></p>
                                 </div>
+                                <div class="mb-4 col-md-6">
+                                    <label for="" class="mb-2">Application Deadline<span class="req">*</span></label>
+                                    <input type="Date" id="Application_Deadline" name="application_dedline" class="form-control">
+                                    <p></p>
+                                </div>
                             </div>
 
                             <div class="mb-4">
@@ -192,6 +197,11 @@ $("#createJobForm").submit(function(e){
                     .siblings('p')
                     .removeClass('invalid-feedback')
                     .html('')
+                
+                $("#application_deadline").removeClass('is-invalid')
+                    .siblings('p')
+                    .removeClass('invalid-feedback')
+                    .html('')
 
 
                 $("#description").removeClass('is-invalid')
@@ -262,6 +272,18 @@ $("#createJobForm").submit(function(e){
                     .siblings('p')
                     .addClass('invalid-feedback')
                     .html(errors.location)
+                } else {
+                    $("#location").removeClass('is-invalid')
+                    .siblings('p')
+                    .removeClass('invalid-feedback')
+                    .html('')
+                }
+
+                if (errors.application_deadline) {
+                    $("#application_deadline").addClass('is-invalid')
+                    .siblings('p')
+                    .addClass('invalid-feedback')
+                    .html(errors.application_deadline)
                 } else {
                     $("#location").removeClass('is-invalid')
                     .siblings('p')

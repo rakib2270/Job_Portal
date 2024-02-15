@@ -17,7 +17,8 @@ class JobTypeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name()
+            'name' => 'Full Time',
+            'status'=> 1,
         ];
     }
 }
