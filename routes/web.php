@@ -17,12 +17,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('/about', function () {
+//     return view('front.about');
 // });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/jobs',[JobsController::class,'index'])->name('jobs');
+
+Route::get('/about', function () {
+    return view('front.about');
+});
+Route::get('/blogs', function () {
+    return view('front.blogs');
+});
+Route::get('/contact', function () {
+    return view('front.contact');
+});
+
 Route::get('/jobs/detail/{id}',[JobsController::class,'detail'])->name('jobDetail');
 Route::post('/apply-job',[JobsController::class,'applyJob'])->name('applyJob');
 Route::post('/save-job',[JobsController::class,'saveJob'])->name('saveJob');

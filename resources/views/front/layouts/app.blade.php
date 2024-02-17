@@ -28,9 +28,19 @@
 						<a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
 					</li>	
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="{{ route('jobs') }}">Find Jobs</a>
+						<a class="nav-link" aria-current="page" href="/about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="{{ route('jobs') }}">Jobs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="/blogs">Blogs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="/contact">Contact</a>
 					</li>										
-				</ul>				
+				</ul>	
+
 				
 				@if (!Auth::check())
 				<a class="btn btn-outline-primary me-2" href="{{ route('account.login') }}" type="submit">Login</a>			
@@ -48,6 +58,7 @@
 </header>
 
 @yield('main')
+@yield('content')
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">

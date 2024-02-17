@@ -34,4 +34,16 @@ class HomeController extends Controller
             'newCategories' => $newCategories
         ]);
     }
+    public function about() {
+             return view('front.about');
+    }
+     public function blogs() {
+             return view('front.blogs');
+    }
+     public function contact() {
+             return view('front.contact');
+    }
+
+
+
 }

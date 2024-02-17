@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 
 @section('main')
-<section class="section-4 bg-2">    
+<section class="section-4 bg-2">
     <div class="container pt-5">
         <div class="row">
             <div class="col">
@@ -11,19 +11,16 @@
                     </ol>
                 </nav>
             </div>
-         
-
         </div> 
     </div>
     <div class="container job_details_area">
         <div class="row pb-5">
             <div class="col-md-8">
-                @include('front.message')
+             @include('front.message')
                 <div class="card shadow border-0">
                     <div class="job_details_header">
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
-                                
                                 <div class="jobs_conetent">
                                     <a href="#">
                                         <h4>{{ $job->title }}</h4>
