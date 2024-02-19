@@ -53,15 +53,15 @@
         <h2>Top Companies</h2>
         <div class="row pt-5">
 
-            @if ($categories->isNotEmpty())
-            @foreach ($categories as $category)
-            <div class="col-lg-4 col-xl-3 col-md-6">
-                <div class="single_catagory">
-                    <a href="{{ route('jobs').'?category='.$category->id }}"><h4 class="pb-2">{{ $category->name }}</h4></a>
-                    <p class="mb-0"> <span>0</span> Available position</p>
-                </div>
-            </div>
-            @endforeach
+            @if ($companies->isNotEmpty())
+                @foreach ($companies as $company)
+                    <div class="col-lg-4 col-xl-3 col-md-6">
+                        <div class="single_catagory">
+                            <a href="{{ route('jobs').'?company='.$company->company_name }}"><h6 class="pb-2"> Name: {{ $company->company_name }}</h6></a>
+                            <p class="mb-0">Sallery: ${{ $company->salary }}</p>
+                        </div>
+                    </div>
+                @endforeach
             @endif
         </div>
 
@@ -118,7 +118,7 @@
 
 <section class="section-3 bg-2 py-5">
     <div class="container">
-        <h2>Latest Jobs</h2>
+        <h2>Recently Published</h2>
         <div class="row pt-5">
             <div class="job_listing_area">
                 <div class="job_lists">

@@ -28,12 +28,12 @@
                             <div class="title-box-2">
 
                                 <h5 class="title-left">
-                                    Send Message Us
+                                    Get in Touch
                                 </h5>
 
                             </div>
                             <div>
-                                <form action="#" method="POST" role="form" class="php-email-form">  <!--role="form" class="php-email-form" -->
+                                <form action="{{route('contactMail')}}" method="POST" role="form" class="php-email-form">  <!--role="form" class="php-email-form" -->
                                     @csrf
                                     <div class="row">
                                         <div class="col-md-12 mb-3">
